@@ -39,8 +39,7 @@ class Book {
 class EBook extends Book {
   double _fileSize;
 
-  EBook(int bookId, String title, String author, int yearPublished, bool isAvailable, this._fileSize)
-      : super(bookId, title, author, yearPublished, isAvailable);
+  EBook(super.bookId, super.title, super.author, super.yearPublished, super.isAvailable, this._fileSize);
 
   double get fileSize => _fileSize;
   set fileSize(double size) => _fileSize = size;
